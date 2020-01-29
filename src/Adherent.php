@@ -31,4 +31,9 @@ class Adherent
         $this->prenom          = $prenom;
         $this->dateDeNaissance = $dateDeNaissance;
     }
+
+    public function getId(): string
+    {
+        return $this->nom.$this->prenom.$this->dateDeNaissance->format('dmY');
+    }
 }
