@@ -25,8 +25,11 @@ class Adherent
      * @param string   $prenom
      * @param DateTime $dateDeNaissance
      */
-    public function __construct(string $nom, string $prenom, DateTime $dateDeNaissance)
-    {
+    public function __construct(
+        string $nom,
+        string $prenom,
+        DateTime $dateDeNaissance
+    ) {
         $this->nom             = $nom;
         $this->prenom          = $prenom;
         $this->dateDeNaissance = $dateDeNaissance;
@@ -34,6 +37,9 @@ class Adherent
 
     public function getId(): string
     {
-        return $this->nom.$this->prenom.$this->dateDeNaissance->format('dmY');
+        $id = $this->nom . $this->prenom . $this->dateDeNaissance->format(
+                'dmY'
+            );
+        return strtoupper($id);
     }
 }
