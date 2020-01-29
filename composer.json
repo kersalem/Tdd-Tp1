@@ -1,0 +1,18 @@
+{
+    "name": "kersalem/tdd-tp1",
+    "autoload": {
+        "classmap": [
+            "src"
+        ]
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.5"
+    },
+    "authors": [
+        {
+            "name": "kersalem",
+            "email": "kersalemarie@outlook.com"
+        }
+    ],
+    "require": {}
+}
