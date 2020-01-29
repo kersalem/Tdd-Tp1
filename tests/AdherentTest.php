@@ -18,4 +18,13 @@ class AdherentTest extends TestCase
             $adherent->getId()
         );
     }
+
+    public function testCapitalize() {
+        $adherent = new Adherent("Pierre", "Paul", new dateTime("1985-04-20"));
+
+        $this->assertEquals(
+            "PIERREPAUL20041985",
+            $adherent->getId()
+        );
+    }
 }
