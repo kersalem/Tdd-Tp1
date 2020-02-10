@@ -27,4 +27,14 @@ class AdherentTest extends TestCase
             $adherent->getId()
         );
     }
+
+    public function testSupprimerCAracteresSpeciaux(){
+        $adherent = new Adherent('Pierrùs-jean', 'Paulà', new dateTime("1985-04-20"));
+
+        $this->assertEquals(
+            "PIERRUSJEANPAULA20041985",
+            $adherent->getId()
+        );
+    }
+
 }
